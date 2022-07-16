@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjerciciosJS</title>
+</head>
+
+<body onload="startclock()" onmousemove="CambiaPosicion()" data-new-gr-c-s-check-loaded="14.1068.0" data-gr-ext-installed="">
+    
+    <center>
+        <h3>
+            <font color="blue">Fecha de hoy</font>
+        </h3>
+
+        <script languaje="JavaScript">
+
+
+            var hoy = new Date();
+            dia = hoy.getDate();
+            mes = hoy.getMonth();
+            anyo = hoy.getYear();
+
+            if (mes == "0") convertir_mes = "Enero";
+            else if (mes == "1") convertir_mes = "Febrero";
+            else if (mes == "2") convertir_mes = "Marzo";
+            else if (mes == "3") convertir_mes = "Abril";
+            else if (mes == "4") convertir_mes = "Mayo";
+            else if (mes == "5") convertir_mes = "Junio";
+            else if (mes == "6") convertir_mes = "Julio";
+            else if (mes == "7") convertir_mes = "Agosto";
+            else if (mes == "8") convertir_mes = "Septiembre";
+            else if (mes == "9") convertir_mes = "Octubre";
+            else if (mes == "10") convertir_mes = "Noviembre";
+            else convertir_mes = "Diciembre";
+            document.write("<H3>" + "Hoy es " + dia + " de " + convertir_mes + " de " + anyo + "</H3>");
+            // Fin ocultar código-->
+        </script>
+        <center>
+            <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width=600>
+            <!-- Comienzo del ejemplo 24 -->
+            <center>
+                <h3>
+                    <font color="blue">Visualización de la hora actual</font>
+                </h3>
+                <form name="clock">
+                    <input name="reloj" size=13>
+                </form>
+            </center>
+
+            <center>&nbsp;</center>
+        </center>
+    </center>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+    <center>
+        <h1>Evento "onMouseOver"</h1>
+
+
+
+        <P>Uso del evento "onMouseOver" para cambiar el color de fondo moviendo el ratón sobre la imagen</P>
+
+        <A onmouseover="changecolor('ffffff')" href="http://www.">
+            <IMG height=20 hspace=10 src="./src/istockphoto-1040425512-170667a.jpg" width=20 vspace=10>
+        </A>
+
+        <A onmouseover="changecolor('ff0000')" href="http://www.">
+            <IMG height=20 hspace=10 src="./src/solid-red-background.jpg" width=20 vspace=10>
+        </A>
+
+        <A onmouseover="changecolor('ffff00')" href="http://www.">
+            <IMG height=20 hspace=10 src="./src/descarga.png" width=20 vspace=10>
+        </A>
+
+        <A onmouseover="changecolor('009900')" href="http://www.">
+            <IMG height=20 hspace=10 src="./src/descarga (1).png" width=20 vspace=10>
+        </A>
+
+        <A onmouseover="changecolor('0000ff')" href="http://www.">
+            <IMG height=20 hspace=10 src="./src/0000ff.png" width=20 vspace=10>
+        </A>
+    </center>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+    <center>
+        <FORM NAME="Calc">
+            <TABLE BORDER=4>
+                <TR>
+                    <TD>
+                        <INPUT TYPE="text" NAME="Input" Size="16">
+                        <br>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD>
+                        <INPUT TYPE="button" NAME="uno" VALUE="  1  " OnClick="Calc.Input.value += '1'">
+                        <INPUT TYPE="button" NAME="dos" VALUE="  2  " OnCLick="Calc.Input.value += '2'">
+                        <INPUT TYPE="button" NAME="tres" VALUE="  3  " OnClick="Calc.Input.value += '3'">
+                        <INPUT TYPE="button" NAME="mas" VALUE="  +  " OnClick="Calc.Input.value += ' + '">
+                        <br>
+                        <INPUT TYPE="button" NAME="cuatro" VALUE="  4  " OnClick="Calc.Input.value += '4'">
+                        <INPUT TYPE="button" NAME="cinco" VALUE="  5  " OnCLick="Calc.Input.value += '5'">
+                        <INPUT TYPE="button" NAME="seis" VALUE="  6  " OnClick="Calc.Input.value += '6'">
+                        <INPUT TYPE="button" NAME="menos" VALUE="   -  " OnClick="Calc.Input.value += ' - '">
+                        <br>
+                        <INPUT TYPE="button" NAME="siete" VALUE="  7  " OnClick="Calc.Input.value += '7'">
+                        <INPUT TYPE="button" NAME="ocho" VALUE="  8  " OnCLick="Calc.Input.value += '8'">
+                        <INPUT TYPE="button" NAME="nueve" VALUE="  9  " OnClick="Calc.Input.value += '9'">
+                        <INPUT TYPE="button" NAME="por" VALUE="  x  " OnClick="Calc.Input.value += ' * '">
+                        <br>
+                        <INPUT TYPE="button" NAME="clear" VALUE="  c  " OnClick="Calc.Input.value = ''">
+                        <INPUT TYPE="button" NAME="cero" VALUE="  0  " OnClick="Calc.Input.value += '0'">
+                        <INPUT TYPE="button" NAME="enter" VALUE="  =  "
+                            OnClick="Calc.Input.value = eval(Calc.Input.value)">
+                        <INPUT TYPE="button" NAME="div" VALUE="  /   " OnClick="Calc.Input.value += ' / '">
+                        <br>
+                    </TD>
+                </TR>
+            </TABLE>
+        </FORM>
+    </center>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+    <center>
+        <h1>Manejando Array´s...</h1>
+        <form name="miFormulario1">
+            <br><b>Introduce un texto:</b><br><br>
+            <textarea name="miArea" wrap="virtual" rows="5" cols="30"></textarea>
+            <br><br>
+            <input type="BUTTON" value="Pulsame" name="miBoton" onclick="tratarTexto()">
+        </form>
+
+    </center>
+
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+    <H3>Conversión de pesetas y euros</H3>
+
+    <form name=monedas>
+        Pesetas: <input type=text name=pesetas>
+        <input type="button" value="Convertir a euros"
+            onclick="if(!isNaN(this.form.pesetas.value)) this.form.c_euros.value=this.form.pesetas.value/166.386; else alert('No es un numero');">
+        Euros: <input type=text name=c_euros readonly>
+        <hr>
+        Euros: <input type=text name=euros>
+        <input type="button" value="Convertir a pesetas"
+            onclick="if(!isNaN(this.form.euros.value)) this.form.c_pesetas.value=this.form.euros.value*166.386; else alert('No es un numero');">
+        Pesetas: <input type=text name=c_pesetas readonly>
+    </form>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+    <H3>Conversión de grados Celsius y Fahrenheit</H3>
+    <form name=grados>
+        Celsius: <input type=text name=celsius>
+        <input type="button" value="Convertir a Fahrenheit"
+            onclick="if(!isNaN(this.form.celsius.value)) this.form.fahrenheit.value=1.8*this.form.celsius.value+32; else alert('No es un numero');">
+
+        Fahrenheit: <input type=text name=fahrenheit readonly>
+    </form>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+    <center>
+        <h2>Manejando el objeto password...</h2>
+        <form name="miFormulario" action="javascript:informar()">Introduzca su usuario y clave...<br><br>
+            <table CELLPADDING=5>
+                <tbody></tbody>
+                <td>usuario:</td>
+                <td><input type="text" name="usuario" size="15"></td>
+                </tr>
+
+                <tr align=RIGHT>
+                    <td>clave:</td>
+                    <td>
+                        <input type="password" name="password" size="15">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" name="botonenviar" value="enviar">
+            <input type="reset" name="botonLimpiar" value="Limpiar">
+        </form>
+
+    </center>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+    <INPUT TYPE=BUTTON ID="Boton" STYLE="position:relative" VALUE="Botón que desaparece"
+        onclick="alert('... y el botón sigue funcionando')" onmouseover="Desaparece(this)"><BR><BR>
+
+    <INPUT TYPE=TEXT ID="Caja" STYLE="position:relative" VALUE="Caja que desaparece"
+        onclick="alert('... y la caja sigue funcionando')" onmouseover="Desaparece(this)"><BR>
+
+    <P ID="Texto" STYLE="position:relative" onclick="alert('... y la caja sigue funcionando')"
+        onmouseover="Desaparece(this)">
+        Texto que desaparece </P><BR>
+
+    <P onclick="Aparece()"> Pulsa aquí para que todo aparezca </P>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+
+    <img src="src/d6.png" name="mydice">
+    <form>
+        <input type="button" value="Lanza el dado!" onClick="throwdice()">
+    </form>
+
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+    <!-- Foto Slider -->
+    <table border="0" cellpadding="0">
+        <caption><strong>Air Show Photos</strong></caption>
+        <tr>
+            <td width="100%"><img src="/src/d6.png" width="300" height="240" name="photoslider"></td>
+        </tr>
+        <tr>
+            <td width="100%">
+                <form method="POST" name="rotater">
+                    <div align="center">
+                        <center>
+                            <p>
+                                <input type="button" value="&lt;&lt;Back" name="B2" onClick="backward()">
+                                <input type="button" value="Next&gt;&gt;" name="B1" onClick="forward()"><br>
+                                <a href="FotoSlider.htm#" onClick="which=3;backward();return false">
+                                    <small>Start Over</small></a>
+                            </p>
+                        </center>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="button" id="Boton" style="position:relative" value="Pulsa"    onclick="alert('Me pillaste')">
+            <br>
+            <br>
+            <br>
+            <br>
+            
+    <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+        <form NAME="tic">
+            <input TYPE="button" NAME="sqr1" class="tictac" value="     " onClick="if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 1; vari(); check();} else if(document.tic.sqr1.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr1.value = ' O '; sqr1T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr2" class="tictac" value="     " onClick="if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 1; vari(); check();} else if(document.tic.sqr2.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr2.value = ' O '; sqr2T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr3" class="tictac" value="     " onClick="if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 1; vari(); check();} else if(document.tic.sqr3.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr3.value = ' O '; sqr3T = 1; turn = 1; vari(); player1Check()} drawCheck()"><br>
+            <input TYPE="button" NAME="sqr4" class="tictac" value="     " onClick="if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 1; vari(); check();} else if(document.tic.sqr4.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr4.value = ' O '; sqr4T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr5" class="tictac" value="     " onClick="if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 1; vari(); check();} else if(document.tic.sqr5.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr5.value = ' O '; sqr5T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr6" class="tictac" value="     " onClick="if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 1; vari(); check();} else if(document.tic.sqr6.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr6.value = ' O '; sqr6T = 1; turn = 1; vari(); player1Check()} drawCheck()"><br>
+            <input TYPE="button" NAME="sqr7" class="tictac" value="     " onClick="if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 1; vari(); check();} else if(document.tic.sqr7.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr7.value = ' O '; sqr7T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr8" class="tictac" value="     " onClick="if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 1; vari(); check();} else if(document.tic.sqr8.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr8.value = ' O '; sqr8T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            <input TYPE="button" NAME="sqr9" class="tictac" value="     " onClick="if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 1; vari(); check();} else if(document.tic.sqr9.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr9.value = ' O '; sqr9T = 1; turn = 1; vari(); player1Check()} drawCheck()">
+            </form>
+            
+            <IMG alt="Barra de separación" border=0 height=1 src="./src/colortbar.jpeg" width="100%">
+
+
+    <h3>Los números primos entre 1 y 100 son:</h3>
+</body>
+<script language=javascript>
+    var i, j, primo;
+    document.write('1<br>');
+    document.write('2<br>');
+    document.write('3<br>');
+    for (i = 4; i <= 100; i++) {
+        primo = 0;
+        for (j = 2; j < i; j++) {
+            if (i % j == 0) primo = 1;
+        }
+        if (primo == 0) { document.write(i); document.write('<br>'); }
+    }
+    function changecolor(code) {
+        document.bgColor = code
+    }
+    function tratarTexto() {
+
+        var array_palabras = new Array();
+        var nueva_ventana;
+        var num_palabras
+
+        array_palabras = miFormulario1.miArea.value.split(" ");
+        num_palabras = array_palabras.length;
+
+        nueva_ventana = window.open("", "", "width=375,height=275,menubar=no");
+        nueva_ventana.document.write("<TITLE>Array´s</TITLE>");
+        nueva_ventana.document.write("<CENTER>");
+        nueva_ventana.document.write("<H3>Información sobre el texto introducido...:</H3>");
+        nueva_ventana.document.write("número de palabras : ");
+        nueva_ventana.document.write("<B>" + num_palabras + "</B>");
+        nueva_ventana.document.write("<BR>primera palabra : ");
+        nueva_ventana.document.write(array_palabras[0].bold());
+        nueva_ventana.document.write("<BR>última palabra : ");
+        nueva_ventana.document.write(array_palabras[num_palabras - 1].bold());
+        nueva_ventana.document.write("<BR>colocadas al revés:<BR>");
+        nueva_ventana.document.write(array_palabras.reverse().join("..").bold());
+        nueva_ventana.document.write("<BR>ordenadas de la 'a' a la 'z':<BR>");
+        nueva_ventana.document.write(array_palabras.sort().join("..").bold());
+        nueva_ventana.document.write("<BR>ordenadas de la 'z' a la 'a':<BR>");
+        nueva_ventana.document.write(array_palabras.sort().reverse().join("..").bold());
+        nueva_ventana.document.write("<H3>...Hecho</H3>");
+        nueva_ventana.document.write("</CENTER>");
+
+    }
+    function informar() {
+
+        var mensaje = "Usuario no autorizado...";
+        var usuarios = new Array(3);
+        var claves = new Array(3);
+
+        usuarios[0] = "CARLOS";
+        usuarios[1] = "JUAN";
+        usuarios[2] = "PEPE";
+
+        claves[0] = "12345"
+        claves[1] = "axcds"
+        claves[2] = "atr99"
+
+        for (i = 0; i < usuarios.length; i++) {
+            if ((usuarios[i] == document.miFormulario.usuario.value.toUpperCase())
+                && (claves[i] == document.miFormulario.password.value)) {
+                mensaje = "Bienvenido al sistema...";
+                break;
+            }
+        }
+
+        alert(mensaje);
+        document.miFormulario.botonLimpiar.click();
+        document.miFormulario.usuario.focus();
+
+    }
+
+
+
+    var timerID = null;
+    var timerRunning = false;
+    var id, pause = 0, position = 0;
+
+    function stopclock() {
+        if (timerRunning)
+            clearTimeout(timerID);
+        timerRunning = false;
+    }
+
+    function showtime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds()
+        var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+        timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+        timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+        timeValue += (hours >= 12) ? " P.M." : " A.M."
+        document.clock.reloj.value = timeValue;
+        timerID = setTimeout("showtime()", 1000);
+        timerRunning = true;
+    }
+    function startclock() {
+        stopclock();
+        showtime();
+    }
+    //preload the six images first
+    var face0 = new Image()
+    face0.src = "src/d1.png"
+    var face1 = new Image()
+    face1.src = "src/d2.png"
+    var face2 = new Image()
+    face2.src = "src/d3.png"
+    var face3 = new Image()
+    face3.src = "src/d4.png"
+    var face4 = new Image()
+    face4.src = "src/d5.png"
+    var face5 = new Image()
+    face5.src = "src/d6.png"
+
+    //create a random integer between 0 and 5
+    function throwdice() {
+        var randomdice = Math.round(Math.random() * 5)
+        document.images["mydice"].src = eval("face" + randomdice + ".src")
+    }
+    function Desaparece(Elemento) {
+        Elemento.style.visibility = "hidden"
+    }
+    function Aparece() {
+        Boton.style.visibility = "visible"
+        Caja.style.visibility = "visible"
+        Texto.style.visibility = "visible"
+    }
+
+    var photos = new Array()
+    var which = 0
+
+    /*Change the below variables to reference your own images. You may have as many images in the slider as you wish*/
+    photos[0] = "/src/d1.png"
+    photos[1] = "/src/d2.png"
+    photos[2] = "/src/d3.png"
+    photos[3] = "/src/d4.png"
+    photos[4] = "/src/d5.png"
+
+
+    function backward() {
+        if (which > 0) {
+            window.status = ''
+            which--
+            document.images.photoslider.src = photos[which]
+        }
+    }
+
+    function forward() {
+        if (which < photos.length - 1) {
+            which++
+            document.images.photoslider.src = photos[which]
+        }
+        else window.status = 'End of gallery'
+    }
+    /* atrapar boton */
+    var MovRaton=0
+    
+function CambiaPosicion(){
+  MovRaton=(MovRaton+1)%10
+  if (MovRaton==0) {
+    Boton.style.top=window.event.y - Math.random()*30-Boton.clientHeight-10
+    Boton.style.left=window.event.x - Math.random()*30-Boton.clientWidth-10
+  }
+}
+</script>
+<script src="/js/laviejita.js"></script>
+</html>
